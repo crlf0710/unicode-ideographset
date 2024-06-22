@@ -227,10 +227,10 @@ def load_unihancore2020():
 
 def make_ideographset_name(prop_list, code_range):
     [script, ideographic, cjk_radical, ui, iicore, unihancore] = prop_list
-    if unihancore != '':
-        return 'IICoreAndUnihanCoreCJKUnifiedIdeograph'
-    elif iicore != '':
+    if iicore != '':
         return 'IICoreCJKUnifiedIdeograph'
+    elif unihancore != '':
+        return 'IICoreAndUnihanCoreCJKUnifiedIdeograph'
     elif ui != '':
         return 'OtherCJKUnifiedIdeograph'
     elif cjk_radical != '':
